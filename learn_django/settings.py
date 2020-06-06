@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
-    'tinymce',
-    'mdeditor',
+    'froala_editor',
+    'martor',
 ]
 
 MIDDLEWARE = [
