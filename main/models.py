@@ -9,3 +9,11 @@ class Site(models.Model):
 
     def __str__(self):
         return self.site_title
+
+class Podder(models.Model):
+    podder_title = models.CharField(max_length=200)
+    podder_description = models.TextField()
+    podder_published = models.DateTimeField("Date Published", default=timezone.now())
+    podder_audio = models.FileField()
+    def __str__(self):
+        return self.podder_title
