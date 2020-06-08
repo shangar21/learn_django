@@ -20,5 +20,6 @@ app_name = 'main'
 
 urlpatterns = [
     path("", views.homepage, name="homepage"),
-    path("podder", views.podder_page, name="podder")
+    path("podder", views.podder_page, name="podder"),
+    path("resume", views.resume, name="resume")
 ]

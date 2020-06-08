@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils import timezone
 from django.core.files.storage import FileSystemStorage
+from audiofield.fields import AudioField 
+import os.path
 
 # Create your models here.
 class Site(models.Model):
@@ -19,3 +21,6 @@ class Podder(models.Model):
     
     def __str__(self):
         return self.podder_title
+
+class Resume(models.Model):
+    resume = models.TextField()
