@@ -1,28 +1,38 @@
-{% load static %}
-<!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 
-<body style="background-color: rgb(68, 68, 68);">
-            
+{% extends "main/header.html" %}
+{% block content %}
 
-  <nav>
-    <div class="nav-wrapper materialize-red darken-4">
-      <a href="#" class="brand-logo">Sharanshangar Muhunthan</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="/">Home</a></li>
-        <li><a href="/podder.html">Podder</a></li>
-        <li><a href="resume.html">Resume</a></li>
-      </ul>
+<nav>
+  <div class="nav-wrapper grey darken-4">
+    <a href="#" class="brand-logo center">Cosmic Brownie Podcast</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+ 
+    </ul>
+  </div>
+</nav>
+
+
+
+<div class="row">
+  <div class="row">
+    {% for pod in podders %}
+    <div class="col s12 m6">
+      <div class="card materialize-red darken-4">
+        <div class="card-content white-text">
+          <span class="card-title">{{pod.podder_title}}</span>
+          <p>{{pod.podder_description}}</p>
+        </div>
+        <div class="card-action materialize-red darken-4">
+          <audio controls>
+            <source src={{pod.podder_audio.url}} type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
     </div>
-  </nav>
-  
-  {% block content %}  
-  {% endblock %}
-             
+    {% endfor %}
+  </div>
+        
+{% endblock %}
 
-</body>
 

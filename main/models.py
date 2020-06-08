@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.core.files.storage import FileSystemStorage
 
 # Create your models here.
 class Site(models.Model):
@@ -14,6 +15,7 @@ class Podder(models.Model):
     podder_title = models.CharField(max_length=200)
     podder_description = models.TextField()
     podder_published = models.DateTimeField("Date Published", default=timezone.now())
-    podder_audio = models.FileField()
+    podder_audio = models.FileField(upload_to="audio")
+    
     def __str__(self):
         return self.podder_title
