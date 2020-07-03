@@ -24,7 +24,7 @@ SECRET_KEY = '$8w*3)1p!rdfrqlt$g%3a41a1prwji^ylp0sw4pi^t16f*t30#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['shangar.site:8080', '50.101.89.44', '192.168.2.72']
+ALLOWED_HOSTS = ['shangar.site:8080', '50.101.89.44', '192.168.2.72', '127.0.0.1']
 
 # Application definition
 
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
     'froala_editor',
+    'tinymce',
 ]
 
 MIDDLEWARE = [

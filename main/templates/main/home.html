@@ -2,7 +2,7 @@
 
 {% extends "main/header.html" %}
   {% block content %}
-  <div class="row">
+  <!-- <div class="row">
       {% for site in sites %}
       <div class="col s12 m6 l4">
         <div class="card materialize-red darken-4">
@@ -13,7 +13,20 @@
         </div>
       </div>
       {% endfor %}
+    </div> -->
+  <div>
+    <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+      {% for site in sites %}
+      <div>
+        <div class="uk-card uk-card-hover uk-card-body">
+            <h3 class="uk-card-title">{{site.site_title}}</h3>
+            <p>{{site.site_content|safe}}</p>
+        </div>
     </div>
+      {% endfor %}
+  </div>
+
+  
   {% endblock %}
 
 
