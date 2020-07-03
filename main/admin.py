@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Site
 from .models import Podder
+from .models import Resume
 from froala_editor.widgets import FroalaEditor
 from martor.widgets import AdminMartorWidget
 from django.db import models
@@ -13,9 +14,6 @@ class SiteAdmin(admin.ModelAdmin):
         ("content", {"fields":["site_content"]})
     ]
 
-    formfield_overrides = {
-        models.TextField: {'widget': FroalaEditor()}
-    }
 
 class PodderAdmin(admin.ModelAdmin):
     fieldsets = [
@@ -25,6 +23,12 @@ class PodderAdmin(admin.ModelAdmin):
         ("Audio", {"fields":["podder_audio"]})
     ]
 
+class ResumeAdmin(admin.ModelAdmin):
+    fieldsets = [
+        ("Title", {"fields":["resume_category"]}),
+        ("content", {"fields":["resume_data"]})
+    ]
 
 admin.site.register(Site, SiteAdmin)
 admin.site.register(Podder, PodderAdmin)
+admin.site.register(Resume, ResumeAdmin)

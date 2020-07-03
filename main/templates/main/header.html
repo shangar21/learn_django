@@ -1,28 +1,25 @@
 {% load static %}
-<!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 
-<body style="background-color: rgb(68, 68, 68);" style="text-decoration-color: blanchedalmond;">
-            
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/css/uikit.min.css" />
 
-  <nav>
-    <div class="nav-wrapper materialize-red darken-4">
-      <a href="#" class="brand-logo">Sharanshangar Muhunthan</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="/">Home</a></li>
-        <li><a href="/podder">Podcast</a></li>
-        <li><a href="/resume">Resume</a></li>
-      </ul>
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit-icons.min.js"></script>
+
+<body>
+  <nav class="uk-navbar-container uk-dark" uk-navbar>
+    <div class="uk-navbar-left">
+      <a class="uk-navbar-item uk-logo" href="/">Shangar Muhunthan</a>
+        <ul class="uk-navbar-nav">
+            <li class="uk-active"><a href="/">Home</a></li>
+            <li class="uk-active"><a href="/podder">Podcast</a></li>
+            <li class="uk-active"><a href="/resume">Resume</a></li>
+        </ul>
     </div>
-  </nav>
-  
-  {% block content %}  
+</nav>
+
+  {% block content %}
   {% endblock %}
-             
-
 </body>
-
