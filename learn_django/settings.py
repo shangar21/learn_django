@@ -24,11 +24,8 @@ SECRET_KEY = '$8w*3)1p!rdfrqlt$g%3a41a1prwji^ylp0sw4pi^t16f*t30#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
-ALLOWED_HOSTS = ['www.shangar.site', '50.101.89.44', '192.168.2.72', 'shangar.site']
-=======
-ALLOWED_HOSTS = ['shangar.site:8080', '50.101.89.44', '192.168.2.72', '127.0.0.1']
->>>>>>> ba22eaf5700a005e719f43312dfccade5efe8443
+
+ALLOWED_HOSTS = ['www.shangar.site', '70.31.33.213', '192.168.2.72', 'shangar.site']
 
 # Application definition
 
