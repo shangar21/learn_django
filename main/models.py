@@ -3,6 +3,7 @@ from django.utils import timezone
 from django.core.files.storage import FileSystemStorage
 from audiofield.fields import AudioField
 from tinymce.models import HTMLField
+from tinymce.widgets import TinyMCE
 import os.path
 
 # Create your models here.

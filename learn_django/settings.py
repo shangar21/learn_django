@@ -25,7 +25,7 @@ SECRET_KEY = '$8w*3)1p!rdfrqlt$g%3a41a1prwji^ylp0sw4pi^t16f*t30#'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['www.shangar.site', '70.31.33.213', '192.168.2.72', 'shangar.site']
+ALLOWED_HOSTS = ['www.shangar.site', '70.48.48.95', '192.168.2.72', 'shangar.site', 'shangar.ddns.net']
 
 # Application definition
 
