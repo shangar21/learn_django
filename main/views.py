@@ -1,6 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Site, Podder, Resume
+from .models import Site, Podder, Resume, Blog
+from django.views.generic import ListView, DetailView
+
+
+class BlogPost(DetailView):
+    model = Blog
+    template_name = 'main/blog_post.html'
+
+class BlogList(ListView):
+    model = Blog
+    template_name = 'main/blog_list.html'
 
 # Create your views here.
 def homepage(request):
@@ -11,3 +21,10 @@ def podder_page(request):
 
 def resume(request):
     return render(request, "main/resume.html", context={"resumes":Resume.objects.all})
+
+'''
+def blog_post(request, id):
+#    post = Blog.objects.get(id=id)
+#    context = {'post':post}
+    return render(request, 'main/blog_post.html', {})
+'''

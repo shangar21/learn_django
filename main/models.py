@@ -4,12 +4,15 @@ from django.core.files.storage import FileSystemStorage
 from audiofield.fields import AudioField
 from tinymce.models import HTMLField
 from tinymce.widgets import TinyMCE
+from django.urls import reverse
+#from tinymce.models import HTMLField
+
 import os.path
 
 # Create your models here.
 class Site(models.Model):
     site_title = models.CharField(max_length=200)
-    site_content = HTMLField()
+    site_content = models.TextField()
     site_published = models.DateTimeField("Date Published", default=timezone.now())
 
     def __str__(self):
@@ -26,7 +29,15 @@ class Podder(models.Model):
 
 class Resume(models.Model):
     resume_category = models.CharField(max_length=200)
-    resume_data = HTMLField()
+    resume_data = models.TextField()
 
     def __str__(self):
         return self.resume_category
+
+class Blog(models.Model):
+    blog_title = models.CharField(max_length=300)
+    blog_description = models.TextField()
+    blog_post = models.TextField()
+
+    def __str__(self):
+        return self.blog_title

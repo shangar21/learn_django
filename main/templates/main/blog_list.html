@@ -1,0 +1,15 @@
+{% extends "main/header.html" %}
+{% block content %}
+<div>
+<div class="uk-margin uk-child-width-1-2@s uk-grid-match" uk-grid>
+   {% for post in object_list %}
+   <div>
+      <div class="uk-card uk-card-hover uk-card-body">
+         <h3 class="uk-card-title">{{post.blog_title}}</h3>
+         <p>{{post.blog_description|safe}}</p>
+      </div>
+      <a class="uk-button uk-button-default" href="/blog_post/{{ post.pk }}">Full Article</a>
+   </div>
+   {% endfor %}
+</div>
+{% endblock %}

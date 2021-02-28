@@ -1,0 +1,19 @@
+{% extends "main/header.html" %}
+{% block content %}
+
+
+<article class="uk-article">
+    <h1 class="uk-article-title">
+        <center>
+            {{ blog.blog_title }}
+        </center>      
+
+    </h1>
+    <p class="uk-article-meta"> 
+        <div class="uk-margin uk-card uk-card-default uk-card-body">
+            {{ blog.blog_post|safe }}
+        </div>
+    </p>
+</article>
+{% endblock %}
+

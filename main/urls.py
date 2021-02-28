@@ -15,11 +15,14 @@ Including another URLconf
 """
 from django.urls import path
 from . import views 
+from .views import BlogList, BlogPost
 
 app_name = 'main'
 
 urlpatterns = [
-    path("", views.homepage, name="homepage"),
-    path("podder", views.podder_page, name="podder"),
-    path("resume", views.resume, name="resume")
+    path("", views.homepage, name="homepage"),    
+    path("resume", views.resume, name="resume"),
+    path('blog_list', BlogList.as_view(), name="blog-list"),
+    path('blog_post/<int:pk>', BlogPost.as_view(), name="blog-post")
 ]
+#path("podder", views.podder_page, name="podder")
