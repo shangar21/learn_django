@@ -1,19 +1,6 @@
 
 {% extends "main/header.html" %}
 {% block content %}
-<!-- <div class="row">
-	{% for resume in resumes %}
-	<div class="col s12 m6 l4">
-	  <div class="card materialize-red darken-4">
-		<div class="card-content white-text">
-		  <span class="card-title">{{resume.resume_category}}</span>
-		  <p>{{resume.resume_data|safe}}</p>
-		</div>
-	  </div>
-	</div>
-	{% endfor %}
-  </div> -->
-
   <div>
     <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
       {% for resume in resumes %}
