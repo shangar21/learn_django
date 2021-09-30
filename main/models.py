@@ -27,6 +27,15 @@ class Podder(models.Model):
     def __str__(self):
         return self.podder_title
 
+class Podcast(models.Model):
+    podcast_title = models.CharField(max_length=200)
+    podcast_description = models.TextField()
+    podder_cover_art = models.FileField(upload_to="images")
+    podcast_url = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.podcast_title
+
 class Resume(models.Model):
     resume_category = models.CharField(max_length=200)
     resume_data = models.TextField()

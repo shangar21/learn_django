@@ -3,6 +3,7 @@ from .models import Site
 from .models import Podder
 from .models import Resume
 from .models import Blog
+from .models import Podcast
 #from froala_editor.widgets import FroalaEditor
 #from martor.widgets import AdminMartorWidget
 from django.db import models
@@ -54,8 +55,21 @@ class BlogAdmin(admin.ModelAdmin):
         models.TextField: {'widget': TinyMCE()},
     }
 
+class PodcastAdmin(admin.ModelAdmin):
+    fieldsets = [
+        ("Title", {"fields":["podcast_title"]}),
+        ("Description", {"fields":["podcast_description"]}),
+        ("URL", {"fields":["podcast_url"]}),
+        ("Cover Art", {"fields":["podder_cover_art"]})
+    ]
+
+    formfield_overrides = {
+        models.TextField: {'widget': TinyMCE()},
+    }
+
 
 admin.site.register(Site, SiteAdmin)
 admin.site.register(Podder, PodderAdmin)
 admin.site.register(Resume, ResumeAdmin)
 admin.site.register(Blog, BlogAdmin)
+admin.site.register(Podcast, PodcastAdmin)
