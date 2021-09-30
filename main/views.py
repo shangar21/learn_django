@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Site, Podder, Resume, Blog
+from .models import Site, Podder, Resume, Blog, Podcast
 from django.views.generic import ListView, DetailView
 
 
@@ -21,6 +21,9 @@ def podder_page(request):
 
 def resume(request):
     return render(request, "main/resume.html", context={"resumes":Resume.objects.all})
+
+def podcast_list(request):
+    return render(request, "main/podcast_list.html", context={"podcasts":Podcast.objects.all})
 
 '''
 def blog_post(request, id):

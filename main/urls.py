@@ -23,6 +23,8 @@ urlpatterns = [
     path("", views.homepage, name="homepage"),    
     path("resume", views.resume, name="resume"),
     path('blog_list', BlogList.as_view(), name="blog-list"),
+    path('podder', views.podder_page, name="podder"),
+    path('podcast_list', views.podcast_list, name="podcast_list"),
     path('blog_post/<int:pk>', BlogPost.as_view(), name="blog-post")
 ]
 #path("podder", views.podder_page, name="podder")
