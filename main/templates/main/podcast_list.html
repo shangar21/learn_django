@@ -1,28 +1,16 @@
 {% extends "main/header.html" %}
 {% block content %}
-
-  <div>
-    <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+  <div class="uk-background-secondary">
+    <div class="uk-child-width-1-2@s uk-grid-match uk-grid">
       {% for pod in podcasts %}
-        <!-- <div class="uk-card uk-card-hover uk-card-body">
-            <img src={{pod.podder_cover_art.url}}>
-        </div>
-        <div class="uk-card uk-card-hover uk-card-body">
-            <h3 class="uk-card-title">{{pod.podcast_title}}</h3>
-            <p>{{pod.podcast_description|safe}}</p>
-        </div> -->
         <div>
-            <div class="uk-card uk-card-hover uk-card-body">
-                <center>
+            <div class="uk-card-secondary uk-card-hover uk-card-body">
                     <img src={{pod.podder_cover_art.url}} width=500 height=500>
-                </center>
-
                <h3 class="uk-card-title">{{pod.podcast_title}}</h3>
                <p>{{pod.podcast_description|safe}}</p>
+               <a class="uk-button uk-button-default uk-width-1-1" href="{{pod.podcast_url}}">Check out the Episodes</a>
             </div>
-            <a class="uk-button uk-button-default" href="{{pod.podcast_url}}">Check out the Episodes</a>
+          </div>
         {% endfor %}
-    </div>
-
   </div>
 {% endblock %}
