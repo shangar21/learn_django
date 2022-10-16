@@ -18,7 +18,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'a$23bb8y+l+0bf63u7*=n0p-7+743+vnvpt(ceerxd#x+$t*-!'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -27,7 +28,7 @@ DEBUG = True
 
 #ALLOWED_HOSTS = ['www.shangar.site', '70.48.48.95', '192.168.2.72', 'shangar.site', 'shangar.ddns.net']
 
-ALLOWED_HOSTS = ['www.shangar.site', '70.48.48.95', '192.168.2.189', 'shangar.site', 'shangar.ddns.net', '127.0.0.1'] #['www.shangar.site', '70.31.33.213', '192.168.2.72', 'shangar.site', '127.0.0.1:8000'] 
+ALLOWED_HOSTS = ['www.shangar.site', '76.70.56.53:80', '70.48.48.95', '192.168.2.189', 'shangar.site', 'shangar.ddns.net', '127.0.0.1'] #['www.shangar.site', '70.31.33.213', '192.168.2.72', 'shangar.site', '127.0.0.1:8000'] 
 
 
 # Application definition
@@ -40,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
-    'froala_editor',
     'tinymce',
 ]
 
@@ -52,7 +52,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'audiofield.middleware.threadlocals.ThreadLocals',
 ]
 
 ROOT_URLCONF = 'learn_django.urls'

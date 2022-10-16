@@ -8,7 +8,7 @@
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit-icons.min.js"></script>
 
-<body class="uk-background-secondary uk-light">
+<body class="uk-background-secondary uk-light" style="min-height:100vh">
   <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
     <nav class="uk-navbar-container uk-dark">
       <div class="uk-navbar uk-background-secondary">
@@ -16,14 +16,13 @@
           <ul class="uk-navbar-nav">
               <li class="uk-active"><a href="/">Home</a></li>             
               <li class="uk-active"><a href="/blog_list">Blog</a></li>
-              <li class="uk-active"><a href="/podder">Podcast</a></li>
+              <!-- <li class="uk-active"><a href="/podcast_list">Podcast</a></li>-->
               <li class="uk-active"><a href="/resume">Resume</a></li>
-	      <li class="uk-active"><a href="/media/resume/cv_14.pdf" download>Download Resume</a></li>
-          </ul>
+	      <li class="uk-active"><a href="/media/resume/cv_14.pdf" download>Download Resume</a></li> 
+	</ul>
       </div>
     </nav>
   </div>
-  
 
   {% block content %}
   {% endblock %}
