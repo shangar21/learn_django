@@ -1,0 +1,8 @@
+{% extends "home.html" %}
+
+{% block content %}
+{%  for a in authors %}
+<a href="/manga_library/series/{{ a.pk }}">{{ a.name }}</a>
+<br>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% load static %}
+
+
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit-icons.min.js"></script>
+
+<body class="uk-background-secondary uk-light" style="min-height:100vh">
+    <a href="/manga_library/authors">Authours</a>
+    <a href="/manga_library/series/0">Series</a>
+    <br>
+    <br>
+
+  {% block content %}
+  {% endblock %}
+</body>

@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', include('main.urls')),
+    path('manga_library/', include('manga_library.urls')),
     path('admin/', admin.site.urls),
     path('tinymce/', include('tinymce.urls'))
 ]
